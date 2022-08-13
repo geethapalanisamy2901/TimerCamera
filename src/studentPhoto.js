@@ -30,11 +30,13 @@ const StudentWebcamCapture = () => {
 
   return (
     <>
+      <h2>Place your face infront of camera</h2>
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          paddingTop: "50px",
         }}
       >
         <CountdownCircleTimer
@@ -47,15 +49,30 @@ const StudentWebcamCapture = () => {
             setImgSrc(imageSrc);
           }}
         >
-          {({ remainingTime }) => remainingTime}
+          {({ remainingTime }) => "Capturing in " + remainingTime}
         </CountdownCircleTimer>
       </div>
 
-      <Webcam audio={false} ref={webcamRef} height={100} width={100} />
+      <Webcam
+        audio={false}
+        ref={webcamRef}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: "80px",
+        }}
+      />
 
-      {/* <button onClick={capture}>Capture photo</button> */}
-
-      {imgSrc && <img src={imgSrc} height={140} width={100} />}
+      {imgSrc && (
+        <img
+          src={imgSrc}
+          style={{
+            paddingTop: "70px",
+            // boxSizing: "content-box",
+          }}
+        />
+      )}
       {console.log(imgSrc)}
     </>
   );
