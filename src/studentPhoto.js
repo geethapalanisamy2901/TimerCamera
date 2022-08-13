@@ -55,7 +55,7 @@ const StudentWebcamCapture = () => {
 
       {/* <button onClick={capture}>Capture photo</button> */}
 
-      {imgSrc && <img src={imgSrc} height={340} width={400} />}
+      {imgSrc && <img src={imgSrc} height={140} width={100} />}
       {console.log(imgSrc)}
     </>
   );
