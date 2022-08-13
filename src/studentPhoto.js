@@ -61,7 +61,8 @@ const StudentWebcamCapture = () => {
           alignItems: "center",
           justifyContent: "center",
           paddingTop: "50px",
-          height: 170,
+          width: "100%",
+          height: "20%",
         }}
       />
 
@@ -70,7 +71,8 @@ const StudentWebcamCapture = () => {
           src={imgSrc}
           style={{
             paddingTop: "70px",
-            height:170
+            width: "100%",
+            height: "20%",
             // boxSizing: "content-box",
           }}
         />
