@@ -36,7 +36,7 @@ const StudentWebcamCapture = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "50px",
+          paddingTop: "20px",
         }}
       >
         <CountdownCircleTimer
@@ -60,7 +60,8 @@ const StudentWebcamCapture = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "80px",
+          paddingTop: "50px",
+          height: 170,
         }}
       />
 
@@ -69,6 +70,7 @@ const StudentWebcamCapture = () => {
           src={imgSrc}
           style={{
             paddingTop: "70px",
+            height:170
             // boxSizing: "content-box",
           }}
         />
