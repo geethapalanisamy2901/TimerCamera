@@ -51,7 +51,7 @@ const StudentWebcamCapture = () => {
         </CountdownCircleTimer>
       </div>
 
-      <Webcam audio={false} ref={webcamRef} height={400} width={400} />
+      <Webcam audio={false} ref={webcamRef} height={100} width={100} />
 
       {/* <button onClick={capture}>Capture photo</button> */}
 
