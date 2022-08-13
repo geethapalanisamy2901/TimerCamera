@@ -36,12 +36,12 @@ const StudentWebcamCapture = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "20px",
         }}
       >
         <CountdownCircleTimer
+          size={100}
           isPlaying
-          duration={5}
+          duration={50}
           colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
           colorsTime={[7, 5, 2, 0]}
           onComplete={() => {
@@ -49,7 +49,7 @@ const StudentWebcamCapture = () => {
             setImgSrc(imageSrc);
           }}
         >
-          {({ remainingTime }) => "Capturing in " + remainingTime}
+          {({ remainingTime }) => remainingTime + " secs"}
         </CountdownCircleTimer>
       </div>
 
@@ -60,8 +60,8 @@ const StudentWebcamCapture = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "50px",
-          width: "100%",
+          paddingTop: "30px",
+          width: "90%",
           height: "20%",
         }}
       />
