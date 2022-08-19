@@ -72,7 +72,7 @@ const StudentWebcamCapture = () => {
           function (event) {
             // call flutter handler with name 'mySum' and pass one or more arguments
             window.flutter_inappwebview
-              .callHandler("mySum", 1, 2, 3)
+              .callHandler("mySum", "hello")
               .then(function (result) {
                 // get result from Flutter side. It will be the number 64.
                 console.log(result);
