@@ -67,19 +67,19 @@ const StudentWebcamCapture = () => {
       />
 
       {imgSrc &&
-        (window.addEventListener(
-          "flutterInAppWebViewPlatformReady",
-          function (event) {
-            // call flutter handler with name 'mySum' and pass one or more arguments
-            window.flutter_inappwebview
-              .callHandler("mySum", "hello")
-              .then(function (result) {
-                // get result from Flutter side. It will be the number 64.
-                console.log(result);
-              });
-          }
-        ),
-        (
+        console.log(imgSrc)(
+          window.addEventListener(
+            "flutterInAppWebViewPlatformReady",
+            function (event) {
+              // call flutter handler with name 'mySum' and pass one or more arguments
+              window.flutter_inappwebview
+                .callHandler("mySum", "hello")
+                .then(function (result) {
+                  // get result from Flutter side. It will be the number 64.
+                  console.log(result);
+                });
+            }
+          ),
           <img
             src={imgSrc}
             style={{
@@ -89,7 +89,7 @@ const StudentWebcamCapture = () => {
               // boxSizing: "content-box",
             }}
           />
-        ))}
+        )}
       {console.log(imgSrc)}
     </>
   );
