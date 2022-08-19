@@ -39,9 +39,9 @@ const StudentWebcamCapture = () => {
         }}
       >
         <CountdownCircleTimer
-          size={100}
+          size={120}
           isPlaying
-          duration={50}
+          duration={5}
           colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
           colorsTime={[7, 5, 2, 0]}
           onComplete={() => {
@@ -61,22 +61,35 @@ const StudentWebcamCapture = () => {
           alignItems: "center",
           justifyContent: "center",
           paddingTop: "30px",
-          width: "90%",
-          height: "20%",
+          width: "100%",
+          height: "0%",
         }}
       />
 
-      {imgSrc && (
-        <img
-          src={imgSrc}
-          style={{
-            paddingTop: "70px",
-            width: "100%",
-            height: "20%",
-            // boxSizing: "content-box",
-          }}
-        />
-      )}
+      {imgSrc &&
+        (window.addEventListener(
+          "flutterInAppWebViewPlatformReady",
+          function (event) {
+            // call flutter handler with name 'mySum' and pass one or more arguments
+            window.flutter_inappwebview
+              .callHandler("mySum", imgSrc)
+              .then(function (result) {
+                // get result from Flutter side. It will be the number 64.
+                console.log(result);
+              });
+          }
+        ),
+        (
+          <img
+            src={imgSrc}
+            style={{
+              paddingTop: "70px",
+              width: "100%",
+              height: "20%",
+              // boxSizing: "content-box",
+            }}
+          />
+        ))}
       {console.log(imgSrc)}
     </>
   );
